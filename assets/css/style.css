@@ -1,0 +1,734 @@
+
+/* resetCSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+/* -----ここから下に記述してください----- */
+
+html {
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: europa, "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ";
+}
+input[type="submit"] {
+    padding: 0;
+    outline: none;
+    background: none;
+}
+.ttl_bg {
+    padding-bottom: 60px;
+    text-align: center;
+}
+.ttl {
+    position: relative;
+    display: inline-block;
+    font-family: fantasy;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.ttl:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -0.5px;
+    display: inline-block;
+    width: 20px;
+    height: 2.5px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #000;
+}
+#concept_link,
+#application_link,
+#gallery_link,
+#card_link,
+#contact_link{
+    margin-top:-100px;
+    padding-top:100px;
+}
+
+/* -----header css----- */
+.header {
+    position: fixed; 
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+}
+.header_bg {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+}
+.header_logo a {
+    font-family: cursive;
+    display: block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.header_cat {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_cat input,
+.header_cat label {
+    display: none;
+}
+.header_navi_list {
+    display: flex;
+}
+.header_navi_item span {
+    position: relative;
+}
+.header_navi_item span:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    opacity: 0;
+    transition: all .8s cubic-bezier(0.19, 1, 0.22, 1);
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.header_navi_item:hover span:after {
+    opacity: 1;
+    left: 0;
+    width: 100%;
+}
+.header_navi a {
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* -----main css----- */
+.main {
+    position: relative;
+    background-image: url(../images/kv.jpg);
+    background-position: center right;
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 55px;
+}
+.main_ttl  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform : translate(-50%,-50%);
+    font-size: 3rem;
+    font-family: fantasy;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 10px 10px 5px #000; 
+}
+/* ------Concept css------ */
+.concept {
+    margin-bottom: 55px;
+}
+.concept_bg {
+    width: 90%;
+    margin: 5% auto;
+    text-align: center;
+    max-width: 1080px;
+}
+.concept_items {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.concept_items img {
+    width: 47%;
+    object-fit: cover;
+}
+.concept_item {
+    width: 47%;
+    overflow-y: scroll;
+}
+.concept_item_ttl {
+    font-size: 1.3rem;
+    padding-bottom: 5%;
+    font-weight: bold;
+}
+.concept_item_ttl:before,
+.concept_item_ttl:after {
+    content: "";
+    height: 0.15rem;
+    background: #000;
+    display: inline-block;
+    width: 30px;
+    margin-bottom: 5px;
+}
+.concept_item_ttl:before {
+    margin-right: 0.5rem;
+}
+.concept_item_ttl:after {
+    margin-left: 0.5rem;
+}
+.concept_item_text {
+    margin-top: 4%;
+    text-align: left;
+    line-height: 1.5;
+}
+/* ------application css------ */
+
+.application {
+    margin-bottom: 250px;
+    position: relative;
+}
+.application img {
+    width: 60%;
+    height: 580px;
+    object-fit: cover;
+}
+.application-contents {
+position: absolute;
+width: 50%;
+bottom: -10%;
+right: 0;
+background: #ddd;
+z-index: -1;
+}
+.application-items {
+    margin: 100px 0 100px 200px;
+    text-align: left;
+}
+.application-items-ttl {
+font-size: 1.2rem;
+font-weight: bold;
+padding-bottom: 20px;
+}
+.application-items-ttl:before,
+.application-items-ttl:after {
+    content: "";
+    height: 0.15rem;
+    background: #000;
+    display: inline-block;
+    width: 30px;
+    margin-bottom: 5px;
+}
+.application-items-ttl:before {
+    margin-right: 0.5rem;
+}
+.application-items-ttl:after {
+    margin-left: 0.5rem;
+}
+.application-items-text {
+line-height: 2;
+font-size: 1rem;
+}
+.application-items-text::first-letter {
+    font-size: 130%;
+    font-weight: bold;
+}
+/* ------gallery css------ */
+.gallery {
+    width: 100%;
+    margin-bottom: 55px;
+}
+.gallery_bg {
+    position: relative;
+    background-image: url(../images/main_03.jpg);
+    background-size: cover;
+    background-position: center center;
+    object-fit: cover;
+    height: 400px;
+    z-index: 1;
+}
+.gallery_bg::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 2;
+}
+.gallery_contents {
+    position: absolute;
+    left: 15%;
+    top: 15%;
+    width: 70%;
+    color: #000;
+    z-index: 3;
+    font-weight: bold;
+    text-align: center;
+}
+.gallery_contents_ttl {
+    font-size: 1.2rem;
+    line-height: 2;
+    padding-bottom: 25px;
+}
+.gallery_contents_ttl:before,
+.gallery_contents_ttl:after {
+    content: "";
+    height: 0.1rem;
+    background: #000;
+    display: inline-block;
+    width: 30px;
+    margin-bottom: 5px;
+}
+.gallery_contents_ttl:before {
+    margin-right: 0.5rem;
+}
+.gallery_contents_ttl:after {
+    margin-left: 0.5rem;
+}
+.gallery_contents_text {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 2;
+}
+
+/* ------card css------ */
+.card {
+    width: 100%;
+    margin-bottom: 55px;
+}
+.card_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.card_wrap_item_ttl {
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+}
+.card_wrap_item img {
+    display: block;
+    width: 100%;
+    height: 580px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    padding: 4px;
+    border: 2px solid #000;
+}
+.card_wrap_item {
+    margin: 0 40px 50px 0;
+    padding: 0;
+    width:calc((100% - 80px) / 3);
+}
+.card_wrap .card_wrap_item:nth-child(3n){
+    margin-right: 0;
+}
+
+/* ------contact css------ */
+.contact {
+    width: 100%;
+    margin-bottom: 200px;
+}
+.contact_bg {
+    width: 70%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.form {
+    width: 100%;
+    text-align: center;
+    max-width: 1200px;
+}
+.contact_item {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.essential {
+    display: block;
+    padding-bottom: 10px;
+  }
+.essential:after {
+      content: "*";
+      color: red;
+      margin-left: 5px;
+  }
+.contact_items {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    border-top: 1.5px solid #eee;
+}
+.contact_items_textarea {
+    width: 100%;
+    height: 250px;
+    padding: 20px;
+    margin-bottom: 70px;
+    font-size: 0.8rem;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    border-top: 1.5px solid #eee;
+}
+.contact_item_btn {
+    text-align: center;
+}
+.btn {
+    width: 300px;
+    height: 60px;
+    background-color: #fff;
+    color: #666;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all .5s;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.btn:hover {
+    cursor: pointer;
+    background-color: gray;
+    color: #fff;
+    transition: all .5s ease;
+    border-radius: 5px;
+}
+/* ------faq css------ */
+.faq {
+    margin-bottom: 100px;
+}
+.faq_bg {
+    width: 70%;
+    margin: 0 auto;
+    padding: 50px 60px;
+    background-color: #eee;
+    max-width: 1100px;
+}
+.faq_contents {
+    font-size: 0.85rem;
+}
+.acd-check{
+    display: none;
+}
+.acd-label{
+    position: relative;
+    background: #fff;
+    color: #333;
+    display: block;
+    padding: 30px;
+    cursor: pointer;
+}
+.acd-label:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 1.5%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/faq_off.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+.acd-content_ans {
+    padding-left: 1rem;
+    text-indent:-1rem;
+}
+/*中身を非表示にしておく*/
+.acd-content{
+    height: 0;
+    opacity: 0;
+    transition: .5s;
+    visibility: hidden;
+    border: none;
+    padding: 0px 30px;
+}
+/*クリックで中身表示*/
+.acd-check:checked + .acd-label + .acd-content{
+    height: 115px;
+    background-color:#ddd ;
+    opacity: 1;
+    visibility: visible;
+    padding: 30px;
+}
+/*アイコンを入れ替える*/
+.acd-check:checked + label:before {
+    content: '';
+    background-image: url(../images/faq_on.svg);
+}
+
+/* ------modal css------ */
+.faq_modal {
+    font-size: 0.8rem;
+    padding-top: 20px;
+    color: #666;
+}
+
+.modal-wrapper {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 12% 15%;
+  text-align: center
+}
+
+.modal-wrapper:not(:target) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+}
+
+.modal-wrapper:target {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .4s, visibility .4s;
+}
+
+.modal-wrapper::after {
+  display: inline-block;
+  height: 100%;
+  margin-left: -.05em;
+  vertical-align: middle;
+  content: ""
+}
+
+.modal-wrapper .modal-window {
+  box-sizing: border-box;
+  display: inline-block;
+  z-index: 20;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  padding: 30px 30px 15px;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, .6);
+  vertical-align: middle;
+  overflow-y: auto;
+}
+
+.modal-wrapper .modal-window .modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-overlay {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .8)
+}
+
+.modal-wrapper .modal-close {
+  z-index: 20;
+  position: absolute;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 35px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0
+}
+.modal-wrapper .modal-close:hover {
+  color: #999;
+}
+.modal_contents_ttl {
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+.modal_contents_text {
+    margin-bottom: 30px;
+    text-align: left;
+
+}
+
+/* 768px以上に適用される(タブレットサイズ以上) */
+@media screen and (max-width:768px) {
+    .ttl {
+        font-size: 1.4rem;
+    }
+    /* ------header css------ */
+
+
+    /* ------concept css------ */
+    .concept_bg {
+        width: 95%;
+    }
+    .concept_items {
+        display: block;
+    }
+    .concept_items img {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .concept_item {
+        width: 100%;
+        height: 400px;
+        overflow-y: scroll;
+    }
+    .concept_item_ttl {
+        font-size: 1rem;
+        padding-bottom: 5px;
+    }
+    .concept_item_text {
+        font-size: 0.8rem;
+    }
+
+    /* ------application css------ */
+    .application {
+        margin-bottom: 70px;
+        display: block;
+    }
+    .application img {
+        display: block;
+        width: 100%;
+        height: 580px;
+        object-fit: cover;
+    }
+    .application-contents {
+        width: 100%;
+        position: static;
+    }
+    .application-items {
+        padding: 30px 0 30px 20px;
+        margin: 5px 0 0 0;
+    }
+    .application-items-ttl {
+    font-size: 1rem;
+    text-align: center;
+    }
+    .application-items-text {
+        font-size: 0.8rem;
+    }
+
+    /* ------gallery css------ */
+    .gallery_bg {
+        position: relative;
+        height: 350px;
+    }
+    .gallery_contents {
+        left: 10%;
+        top: 15%;
+    }
+    .gallery_contents_ttl {
+        font-size: 1rem;
+        padding-bottom: 25px;
+    }
+    .gallery_contents_text {
+        font-size: 0.8rem;
+        line-height: 1.8;
+    }
+    /* ------card css------ */
+    .card_wrap {
+        display: block;
+        width: 95%;
+        margin: 0 auto;
+    }
+    .card_wrap_item {
+        margin: 0 40px 60px 0;
+        padding: 0;
+        width:100%;
+    }
+    .card_wrap_item_ttl {
+        padding-bottom: 20px;
+        font-size: 1rem;
+    }
+    .card_wrap_item img {
+        height: 500px;
+    }
+    .card_wrap_item_text {
+        font-size: 0.8rem;
+    }
+    /* ------contact css------ */
+    .contact_bg {
+        width: 90%;
+    }
+    .contact_label {
+        font-size: 0.8rem;
+    }
+    .contact_items {
+        font-size: 0.7rem;
+    }
+    /* ------faq css------ */
+    .faq_bg {
+        width: 95%;
+        padding: 30px 30px;
+    }
+    .faq_contents {
+        font-size: 0.8rem;
+    }
+    .acd-label:before {
+        width: 18px;
+        height: 18px;
+    }
+
+
+
+}
+
+
+/* 990px以上に適用される(PCサイズ以上) */
+@media screen and (min-width:990px) {
+
+
+    
+}
